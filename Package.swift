@@ -6,6 +6,7 @@ let package = Package(
     name: "ZippyJSON",
     platforms: [
         .iOS(.v11),
+        .macOS(.v10_12)
     ],
     products: [
         .library(
@@ -22,6 +23,7 @@ let package = Package(
             dependencies: ["ZippyJSONCFamily", "JJLISO8601DateFormatter"]),
         .testTarget(
             name: "ZippyJSONTests",
-            dependencies: ["ZippyJSON"]),
+            dependencies: ["ZippyJSON"],
+            path: "Tests"),
     ]
 )
